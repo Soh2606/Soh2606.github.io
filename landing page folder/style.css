@@ -1,0 +1,42 @@
+body{
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    background-image: radial-gradient(rgb(252, 96, 193) 20%, transparent 20%),
+      radial-gradient(rgb(252, 96, 193) 20%, transparent 20%);
+  background-position: 0 0, 100px 100px;
+  background-size: 200px 200px;
+}
+
+.bg{
+    position: fixed;
+    width: 1500px;
+    height: 380px;
+    bottom: 0px;
+    left: -60px;
+    animation: change 4s infinite;
+}
+@keyframes change{
+    0%{
+        background-image: url("monster1.svg");
+    }
+    10%{
+        background-image: url("moster2.svg");
+    }
+    45%{
+        background-image: url("moster2.svg");
+    }
+    50%{
+        background-image: url("moster2.svg");
+    }
+    60%{
+        background-image: url("moster2.svg");
+    }
+    65%{
+        background-image: url("monster1.svg");
+    }
+    100%{
+        background-image: url("monster1.svg");
+    }
+}
+
