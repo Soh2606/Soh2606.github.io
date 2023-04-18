@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Response.js" defer></script>
+    <title>
+        Response
+    </title>
+    <style>
+        #ball {
+           width: 100px;
+           height: 100px;
+           background-color: red;
+           border-radius: 50px;
+           position: absolute;
+        }
+     </style>
+</head>
+<body>
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center;">The Medium is the Massage?</h1>
+    <div id="ball"></div>
+    <script>
+          const ball = document.getElementById("ball");
+          let x = 0;
+          let y = 0;
+          let xSpeed = 10;
+          let ySpeed = 10;
+          function animate() {
+          x += xSpeed;
+          y += ySpeed;
+          if (x + 50 > window.innerWidth || x < 0) {
+             xSpeed = -xSpeed;
+          }
+          if (y - 520 > window.innerHeight || y < 0) {
+             ySpeed = -ySpeed;
+          }
+          ball.style.left = x + "px";
+          ball.style.top = y + "px";
+          requestAnimationFrame(animate);
+       }
+      animate();
+    </script>
+     <img src="MY FAVOURITE QUOTES.png" style="display: block; block-size: 500px; margin-left: 0px; margin-top: 150px;">
+     <img src="Response.png" style="display: block; block-size: 500px; margin-left: 500px; margin-top:150px;">
+ </body>
+</html>
