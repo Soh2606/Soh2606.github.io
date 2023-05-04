@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+body{
+    padding: 0;
+    margin: 100;
+    background-color: rgb(224,98,164);
+    font-family: 'Poppins', sans-serif;
+}
+.cone{
+    z-index: -1;
+    position: relative;
+    top: 0px;
+    left: 200px;
+    animation-fill-mode: backwards;
+    animation: fall 4s infinite;
+}
+@keyframes fall{
+    0%{
+        height: 10%;
+        width: 10%;
+    }
+    47%{
+        opacity: 1;
+    }
+    47.25%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        height: 10%;
+        width: 10%;
+        transform: translateY(350px);
+    }
+}
+.bg{
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: change 4s infinite;
+}
+@keyframes change{
+    0%{
+        background-image: url("monster1.svg");
+    }
+    10%{
+        background-image: url("monster2.svg");
+    }
+    45%{
+        background-image: url("monster2.svg");
+    }
+    50%{
+        background-image: url("monster1.svg");
+    }
+    100%{
+        background-image: url("monster1.svg");
+    }
+}
+
+
